@@ -59,13 +59,15 @@ function ProductsSlider({ number }) {
           accusamus.
         </p>
       </div>
-      <article className="carousel_wrapper">
-        <Slider {...settings}>
-          {products.map((product) => {
-            return <Product key={product._id} product={product} />;
-          })}
-        </Slider>
-      </article>
+      <div className="product__slider">
+        <article className="carousel_wrapper">
+          <Slider {...settings}>
+            {products.map((product) => {
+              return <Product key={product._id} product={product} />;
+            })}
+          </Slider>
+        </article>
+      </div>
     </>
   );
 }

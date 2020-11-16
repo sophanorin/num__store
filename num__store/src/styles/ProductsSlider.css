@@ -24,11 +24,14 @@
   opacity: 0.5;
 }
 
-.carousel_wrapper {
+.product__slider {
   width: 70%;
-  margin: 5rem auto;
+  margin: 2rem auto 5rem auto;
+  position: relative;
+}
 
-  overflow: hidden;
+.carousel_wrapper {
+  position: relative;
 }
 
 .slick-slider {
@@ -38,7 +41,7 @@
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translateY(-50%);
+  transform: translate(-100%, -50%);
   z-index: 999;
   background: gray;
   width: 5rem;
@@ -47,13 +50,14 @@
   border: none;
   border-radius: 1rem;
   cursor: pointer;
+  position: absolute;
 }
 
 .slick-next {
   position: absolute;
   top: 50%;
   right: 0;
-  transform: translateY(-50%);
+  transform: translate(100%, -50%);
   z-index: 999;
   background: gray;
   width: 5rem;

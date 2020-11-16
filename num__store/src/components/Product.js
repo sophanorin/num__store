@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { AiFillStar, AiOutlineStar } from "react-icons/ai";
-import { BsStarHalf, BsEye, BsHeartFill } from "react-icons/bs";
+import { BsEye, BsHeartFill } from "react-icons/bs";
 import { ImLoop2 } from "react-icons/im";
+import Rating from "./Rating";
 import "../styles/Product.css";
 
 function Product(props) {
@@ -17,21 +17,7 @@ function Product(props) {
         <div className="product__footer">
           <h3>${product.title}</h3>
           <div className="rating">
-            <svg>
-              <AiFillStar />
-            </svg>
-            <svg>
-              <AiFillStar />
-            </svg>
-            <svg>
-              <AiFillStar />
-            </svg>
-            <svg>
-              <BsStarHalf />
-            </svg>
-            <svg>
-              <AiOutlineStar />
-            </svg>
+            <Rating rating={product.rating} />
           </div>
           <div className="product__price">
             <h4>${product.price}</h4>

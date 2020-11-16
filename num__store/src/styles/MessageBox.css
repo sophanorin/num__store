@@ -1,0 +1,14 @@
+.messageBox {
+  width: 90%;
+  margin: auto;
+  border-radius: 1rem;
+  padding: 1rem;
+  background: rgba(252, 0, 34, 0.5);
+  margin: 3rem;
+}
+
+.messageBox p {
+  font-size: 1.5rem;
+  color: rgb(253, 201, 201);
+  text-align: center;
+}

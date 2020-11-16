@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "../styles/screens/ProductScreen.css";
+import "../styles/screens/ProductDetial.css";
 function ProductScreen(props) {
   const defaultProduct = {
     _id: "",

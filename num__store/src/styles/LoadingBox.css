@@ -1,0 +1,11 @@
+.loadingBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loadingBox i {
+  font-size: 2rem;
+}
+.loadingBox p {
+  font-size: 1.5rem;
+}

@@ -17,9 +17,9 @@ function Home() {
           quo.
         </p>
         <div className="control">
-          <a href="#" className="contact">
+          <Link to="/contact" className="contact">
             Contact Us
-          </a>
+          </Link>
           <Link to="/shop" className="shop">
             Shop Now
           </Link>

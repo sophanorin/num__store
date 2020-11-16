@@ -45,17 +45,17 @@ function Header() {
                 </Link>
               </li>
               <li className="nav__item">
-                <Link href="#category" className="nav__link scroll-link">
+                <Link to="/category" className="nav__link scroll-link">
                   Category
                 </Link>
               </li>
               <li className="nav__item">
-                <Link href="#news" className="nav__link scroll-link">
+                <Link to="/blogs" className="nav__link scroll-link">
                   Blog
                 </Link>
               </li>
               <li className="nav__item">
-                <Link href="#contact" className="nav__link scroll-link">
+                <Link to="/contact" className="nav__link scroll-link">
                   Contact
                 </Link>
               </li>

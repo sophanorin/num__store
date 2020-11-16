@@ -1,9 +1,10 @@
 import React from "react";
+import "../styles/MessageBox.css";
 
 function MessageBox({ error }) {
   return (
-    <div>
-      <h1>{error}</h1>
+    <div className="messageBox">
+      <p>{error}</p>
     </div>
   );
 }

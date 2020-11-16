@@ -6,7 +6,7 @@ import Footer from "./components/Footer.js";
 import Shop from "./components/Shop.js";
 import ProductsSlider from "./screens/ProductsSlider";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import ProductScreen from "./screens/ProductScreen.js";
+import ProductDetial from "./screens/ProductDetial.js";
 function App() {
   return (
     <Router>
@@ -27,7 +27,7 @@ function App() {
             </section>
           </main>
         </Route>
-        <Route path="/product/:id" exact component={ProductScreen} />
+        <Route path="/product/:id" exact component={ProductDetial} />
         <Route path="/shop" component={Shop} />
       </Switch>
       <footer id="footer" className="section footer">

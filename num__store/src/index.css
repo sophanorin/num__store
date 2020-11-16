@@ -995,9 +995,10 @@ Latest Products Media Query
     height: 4rem;
   }
 
-  .rating svg {
+  .rating i {
     width: 1.3rem;
     height: 1.3rem;
+    fill: var(--yellow);
   }
 
   .latest__products .glide__arrow--left,
@@ -1036,6 +1037,9 @@ Category Center
 @media only screen and (max-width: 1100px) {
   .category__center {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .category__products .product__header img {
+    object-fit: contain;
   }
 }
 
@@ -2245,7 +2249,7 @@ Product Details Media Query
     margin-right: 0rem;
   }
 
-  .product__review .rating svg {
+  .product__review .rating i {
     width: 1.4rem;
     height: 1.4rem;
   }
