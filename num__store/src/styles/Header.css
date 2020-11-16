@@ -1,0 +1,91 @@
+Header {
+  width: 100%;
+  background: rgb(243, 243, 243);
+}
+.arrow {
+  font-size: 1.3rem;
+}
+.header-info {
+  width: 90%;
+  margin: auto;
+  font-size: 1rem;
+  min-height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #474747;
+}
+.header-info p,
+.header-info span {
+  font-size: 1.3rem;
+}
+
+.header-acc a {
+  margin: 0rem 1rem;
+  font-size: 1.3rem;
+}
+.header-nav {
+  background: #f0f1f7;
+}
+.nav-bar {
+  width: 90%;
+  margin: auto;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-search {
+  min-width: 35rem;
+  margin: 0rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 3;
+  position: relative;
+  border: 2px;
+  border-radius: 50%;
+}
+.nav-search input {
+  width: 100%;
+  min-width: 35rem;
+  height: 4rem;
+  padding: 2rem;
+  background: #e4e4e4;
+  border-radius: 4rem;
+  border: 2px solid #464545;
+  outline: none;
+  font-size: 2rem;
+}
+.search-icon {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.nav-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.circle {
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid #4b4b4b;
+  border-radius: 50%;
+  z-index: 5;
+  position: relative;
+  margin: 0rem 0rem 0rem 3rem;
+  cursor: pointer;
+}
+
+.circle a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  font-size: 2rem;
+}
