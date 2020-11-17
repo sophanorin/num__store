@@ -17,6 +17,7 @@
 .header-productslist h2 {
   font-size: 5rem;
   margin-top: 7rem;
+  text-align: center;
   z-index: 2;
 }
 .header-productslist span {
@@ -28,6 +29,7 @@
   transform: translateX(-50%);
   color: #8e8e8e;
   opacity: 0.5;
+  text-align: center;
 }
 .header-productslist p {
   font-size: 2rem;

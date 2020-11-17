@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { GrClose } from "react-icons/gr";
 import { FiShoppingCart, FiHeart, FiMenu, FiUser } from "react-icons/fi";
 import "../styles/Header.css";
+import { useSelector } from "react-redux";
 
 function Header() {
   const [toggle, setToggle] = useState(false);
@@ -11,6 +12,8 @@ function Header() {
     setToggle(!toggle);
   };
 
+  const cart = useSelector((state) => state.cart);
+  const { cartItems } = cart;
   useEffect(() => {
     if (toggle) document.body.classList.add("active");
     else document.body.classList.remove("active");
@@ -73,7 +76,7 @@ function Header() {
 
             <a href="#" className="icon__item">
               <FiShoppingCart />
-              <span id="cart__total">0</span>
+              <span id="cart__total">{cartItems.length}</span>
             </a>
           </div>
         </nav>

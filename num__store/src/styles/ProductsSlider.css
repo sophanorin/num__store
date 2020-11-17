@@ -11,7 +11,12 @@
 
 .header-productsslider h2 {
   font-size: 5rem;
+  text-align: center;
   z-index: 2;
+}
+.header-productsslider p {
+  font-size: 2rem;
+  text-align: center;
 }
 .header-productsslider span {
   font-size: 7rem;

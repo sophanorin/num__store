@@ -7,6 +7,7 @@ import Shop from "./components/Shop.js";
 import ProductsSlider from "./screens/ProductsSlider";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ProductDetial from "./screens/ProductDetial.js";
+import CartScreen from "./screens/CartScreen";
 function App() {
   return (
     <Router>
@@ -27,6 +28,7 @@ function App() {
             </section>
           </main>
         </Route>
+        <Route path="/cart/:id?" component={CartScreen} />
         <Route path="/product/:id" exact component={ProductDetial} />
         <Route path="/shop" component={Shop} />
       </Switch>

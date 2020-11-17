@@ -43,6 +43,7 @@ input {
 
 a {
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 ul {
@@ -1039,7 +1040,9 @@ Category Center
     grid-template-columns: 1fr 1fr 1fr;
   }
   .category__products .product__header img {
+    width: 100%;
     object-fit: contain;
+    text-align: center;
   }
 }
 
