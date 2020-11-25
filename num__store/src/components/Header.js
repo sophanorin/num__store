@@ -2,18 +2,30 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { GrClose } from "react-icons/gr";
 import { FiShoppingCart, FiHeart, FiMenu, FiUser } from "react-icons/fi";
+import { HiOutlineClipboardList } from "react-icons/hi";
+import { BiLogOut } from "react-icons/bi";
+import { RiHistoryFill } from "react-icons/ri";
 import "../styles/Header.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { signout } from "../actions/userActions";
 
-function Header() {
+function Header(props) {
   const [toggle, setToggle] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
   const menuRef = useRef(null);
+  const dispatch = useDispatch();
   const toggleLinks = () => {
     setToggle(!toggle);
   };
-
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
+  const user = useSelector((state) => state.userSignin);
+  const { userInfo } = user;
+  const signoutHandler = () => {
+    dispatch(signout());
+    setDropdown(false);
+  };
+
   useEffect(() => {
     if (toggle) document.body.classList.add("active");
     else document.body.classList.remove("active");
@@ -43,22 +55,38 @@ function Header() {
             </div>
             <ul className="nav__list">
               <li className="nav__item">
-                <Link to="/" className="nav__link scroll-link">
+                <Link
+                  to="/"
+                  className="nav__link scroll-link"
+                  onClick={toggleLinks}
+                >
                   Home
                 </Link>
               </li>
               <li className="nav__item">
-                <Link to="/category" className="nav__link scroll-link">
-                  Category
+                <Link
+                  to="/shop"
+                  className="nav__link scroll-link"
+                  onClick={toggleLinks}
+                >
+                  Shop
                 </Link>
               </li>
               <li className="nav__item">
-                <Link to="/blogs" className="nav__link scroll-link">
+                <Link
+                  to="/blogs"
+                  className="nav__link scroll-link"
+                  onClick={toggleLinks}
+                >
                   Blog
                 </Link>
               </li>
               <li className="nav__item">
-                <Link to="/contact" className="nav__link scroll-link">
+                <Link
+                  to="/contact"
+                  className="nav__link scroll-link"
+                  onClick={toggleLinks}
+                >
                   Contact
                 </Link>
               </li>
@@ -66,18 +94,73 @@ function Header() {
           </div>
 
           <div className="nav__icons">
-            <a href="#" className="icon__item">
-              <FiUser />
-            </a>
+            <div
+              className="profile"
+              onMouseEnter={() => setDropdown(true)}
+              onMouseLeave={() => {
+                setDropdown(false);
+              }}
+            >
+              <Link
+                to={userInfo ? "/account" : "/signin"}
+                className="icon__item"
+              >
+                <FiUser />
+              </Link>
+              {dropdown &&
+                (userInfo ? (
+                  <div className="dropdown_profile">
+                    <div>
+                      <div className="profile_image">
+                        {/* <img src={""} alt="" /> */}
+                      </div>
+                      <h2>{userInfo.name.substring(0, 10) + "..."}</h2>
+                    </div>
+                    <span className="seperater"></span>
+                    <div className="profile_menu">
+                      <ul>
+                        <li>
+                          <Link to="/orders">
+                            <HiOutlineClipboardList /> View Orders
+                          </Link>{" "}
+                        </li>
+                        <li>
+                          <Link to="/wishlist">
+                            <FiHeart /> My Wishlist
+                          </Link>{" "}
+                        </li>
+                        <li>
+                          <Link to="/history">
+                            <RiHistoryFill /> View History
+                          </Link>{" "}
+                        </li>
+                        <li>
+                          <Link to="#signout" onClick={signoutHandler}>
+                            <BiLogOut /> Log Out
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                ) : (
+                  <div
+                    className="profile_login"
+                    onMouseEnter={() => setDropdown(true)}
+                  >
+                    <h2>Welcome To NUM STORE</h2>
+                    <Link to="/signin">Sign in / Register</Link>
+                  </div>
+                ))}
+            </div>
 
             <a href="#" className="icon__item">
               <FiHeart />
             </a>
 
-            <a href="#" className="icon__item">
+            <Link to="/cart" className="icon__item">
               <FiShoppingCart />
               <span id="cart__total">{cartItems.length}</span>
-            </a>
+            </Link>
           </div>
         </nav>
       </div>

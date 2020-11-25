@@ -38,25 +38,26 @@ function Footer() {
               <span>
                 <GoLocation />
               </span>
-              42 Dream House, Dreammy street, 7131 Dreamville, USA
+              St.96 Christopher Howes, Khan Daun Penh, BS16 AP18 Phnom Penh,
+              Cambodia.
             </div>
             <div>
               <span>
                 <AiOutlineMail />
               </span>
-              company@gmail.com
+              numrobotics@gmail.com
             </div>
             <div>
               <span>
                 <FiPhone />
               </span>
-              456-456-4512
+              855-1111-1111
             </div>
             <div>
               <span>
                 <FaRegPaperPlane />
               </span>
-              Dream City, USA
+              Dream City, Cambodia
             </div>
           </div>
         </div>

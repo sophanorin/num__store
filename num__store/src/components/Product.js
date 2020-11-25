@@ -1,13 +1,19 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { BsEye, BsHeartFill } from "react-icons/bs";
 import { ImLoop2 } from "react-icons/im";
 import Rating from "./Rating";
 import "../styles/Product.css";
+import { addToCart } from "../actions/cartAction";
 
 function Product(props) {
   const { product } = props;
+  const dispatch = useDispatch();
 
+  const addTOCartHanlder = (id) => {
+    dispatch(addToCart(id, 1));
+  };
   return (
     <>
       <div className="product category__products">
@@ -22,15 +28,17 @@ function Product(props) {
           <div className="product__price">
             <h4>${product.price}</h4>
           </div>
-          <a href="#">
-            <button type="submit" className="product__btn">
-              Add To Cart
-            </button>
-          </a>
+          <button
+            type="button"
+            className="product__btn"
+            onClick={() => addTOCartHanlder(product._id)}
+          >
+            Add To Cart
+          </button>
         </div>
         <ul>
           <li>
-            <Link to={`/product/${product._id}`}>
+            <Link to={`/products/${product._id}`}>
               <BsEye />
             </Link>
           </li>

@@ -1,0 +1,176 @@
+.cart_container {
+  min-height: 80vh;
+  max-width: 70%;
+  margin: auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.shopping_list {
+  flex: 3 1 60rem;
+  max-width: 100%;
+}
+
+.shopping_list h3 {
+  text-transform: capitalize;
+  color: #29303b;
+  margin-bottom: 1rem;
+}
+
+.shopping_list ul {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card {
+  width: 75rem;
+  border: 1px solid #919199;
+  display: flex;
+  flex-wrap: wrap;
+}
+.col-1 {
+  flex: 3 1 30rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.col-1 img {
+  max-width: 10rem;
+  max-height: 10rem;
+  object-fit: contain;
+  margin: 0.5rem;
+}
+
+.col-1 div {
+  width: 100%;
+  height: 100%;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-transform: capitalize;
+}
+
+.col-1 div h4 {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.col-1 div p {
+  font-size: 1.2rem;
+}
+
+.col-2 {
+  flex: 1 1 10rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.col-2 select {
+  width: 7rem;
+  height: 5rem;
+  padding: 0rem 1rem;
+  border: none;
+  border-bottom: 1px solid #000;
+  border-radius: 0.5rem;
+  font-size: 1.7rem;
+}
+
+.col-2 select::selected {
+  border: none;
+}
+
+.col-3 {
+  height: 10rem;
+  flex: 1 1 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 1rem 0rem;
+}
+
+.col-3 button {
+  border: none;
+  outline: none;
+  background: none;
+  color: #007791;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.col-3 button:hover {
+  color: rgb(31, 31, 31);
+}
+
+.col-4 {
+  flex: 2 1 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  margin: 1rem;
+}
+
+.col-4 h3 {
+  font-weight: 600;
+  color: #ec5252;
+  position: absolute;
+  text-align: right;
+  right: 2rem;
+}
+.col-4 div:nth-child(2) svg {
+  position: absolute;
+  top: 0.3rem;
+  right: 0;
+  color: #ec5252;
+}
+
+.shopping_checkout {
+  flex: 1 1 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.shopping_checkout h4 {
+  margin-bottom: 1.5rem;
+}
+
+.shopping_checkout h2 {
+  margin-bottom: 1.5rem;
+  font-size: 3rem;
+  color: #29303b;
+}
+.shopping_checkout a {
+  width: 100%;
+  border: none;
+  outline: 0;
+  border-radius: 0.2rem;
+  background: #ec5252;
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  text-align: center;
+  padding: 2rem 0rem;
+}
+.shopping_checkout a:hover {
+  background: #a13838;
+}
+.shopping_checkout a:focus {
+  border: none;
+}

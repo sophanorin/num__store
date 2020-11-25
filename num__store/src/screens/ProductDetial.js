@@ -16,7 +16,6 @@ function ProductScreen(props) {
   const productDetail = useSelector((state) => state.productDetail);
   const { loading, error, product } = productDetail;
   const [qty, setQty] = useState(1);
-
   const addToCartHandler = () => {
     props.history.push(`/cart/${productId}?qty=${qty}`);
   };

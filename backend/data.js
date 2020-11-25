@@ -1,8 +1,22 @@
+import bcrypt from "bcryptjs";
 const data = {
+  users: [
+    {
+      name: "Sophanorin Heou",
+      email: "admin@gmail.com",
+      password: bcrypt.hashSync("1234", 8),
+      isAdmin: true,
+    },
+    {
+      name: "Jonh",
+      email: "user@gmail.com",
+      password: bcrypt.hashSync("1234", 8),
+      isAdmin: false,
+    },
+  ],
   products: [
     {
-      _id: "1",
-      title: "Nike Slim Shirt",
+      title: "ProductA1",
       category: "robot",
       image: "/assets/p1.png",
       price: 120,
@@ -13,8 +27,7 @@ const data = {
       description: "high quality product",
     },
     {
-      _id: "2",
-      title: "Adidas Fit Shirt",
+      title: "ProductA2",
       category: "robot",
       image: "/assets/p2.png",
       price: 100,
@@ -25,8 +38,7 @@ const data = {
       description: "high quality product",
     },
     {
-      _id: "3",
-      title: "Lacoste Free Shirt",
+      title: "ProductA4",
       category: "robot",
       image: "/assets/p3.png",
       price: 220,
@@ -37,11 +49,10 @@ const data = {
       description: "high quality product",
     },
     {
-      _id: "4",
-      title: "Nike Slim Pant",
+      title: "ProductA8",
       category: "robot",
       image: "/assets/p4.png",
-      price: 78,
+      price: 30,
       countInStock: 15,
       brand: "Nike",
       rating: 4.5,
@@ -49,8 +60,7 @@ const data = {
       description: "high quality product",
     },
     {
-      _id: "5",
-      title: "Puma Slim Pant",
+      title: "ProductA0",
       category: "robot",
       image: "/assets/p5.png",
       price: 65,
@@ -61,8 +71,7 @@ const data = {
       description: "high quality product",
     },
     {
-      _id: "6",
-      title: "Adidas Fit Pant",
+      title: "ProductA9",
       category: "robot",
       image: "/assets/p6.png",
       price: 139,
@@ -73,8 +82,7 @@ const data = {
       description: "high quality product",
     },
     {
-      _id: "7",
-      title: "Adidas Fit Pant",
+      title: "ProductA17",
       category: "robot",
       image: "/assets/p6.png",
       price: 139,
@@ -85,8 +93,7 @@ const data = {
       description: "high quality product",
     },
     {
-      _id: "8",
-      title: "Adidas Fit Pant",
+      title: "ProductA12",
       category: "robot",
       image: "/assets/p6.png",
       price: 139,

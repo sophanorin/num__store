@@ -158,6 +158,7 @@ Navigation
 .nav__icons {
   justify-self: center;
   display: flex;
+  align-items: center;
   position: relative;
 }
 
@@ -186,8 +187,8 @@ Navigation
   border: 1px solid var(--black);
 }
 
-.nav__icons .icon__item:not(:last-child) {
-  margin-right: 1rem;
+.nav__icons .icon__item:nth-child(2) {
+  margin: 0rem 1rem;
 }
 
 .nav__icons #cart__total {

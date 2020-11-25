@@ -20,7 +20,7 @@ function Products() {
       {loading ? (
         <LoadingBox />
       ) : error ? (
-        <MessageBox error={error}></MessageBox>
+        <MessageBox>{error}</MessageBox>
       ) : (
         <>
           <div className="header-productslist">

@@ -8,6 +8,10 @@ import ProductsSlider from "./screens/ProductsSlider";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ProductDetial from "./screens/ProductDetial.js";
 import CartScreen from "./screens/CartScreen";
+import RegisterScreen from "./screens/RegisterScreen";
+import SigninScreen from "./screens/SigninScreen";
+import CheckoutScreen from "./screens/CheckoutScreen";
+import ContactScreen from "./screens/ContactScreen";
 function App() {
   return (
     <Router>
@@ -29,7 +33,11 @@ function App() {
           </main>
         </Route>
         <Route path="/cart/:id?" component={CartScreen} />
-        <Route path="/product/:id" exact component={ProductDetial} />
+        <Route path="/signin" component={SigninScreen} />
+        <Route path="/contact" component={ContactScreen} />
+        <Route path="/register" component={RegisterScreen} />
+        <Route path="/checkout" component={CheckoutScreen} />
+        <Route path="/products/:id" exact component={ProductDetial} />
         <Route path="/shop" component={Shop} />
       </Switch>
       <footer id="footer" className="section footer">
