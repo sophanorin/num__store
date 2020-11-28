@@ -36,6 +36,10 @@ app.get("/", (req, res) => {
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("../num__store/build"));
+  const path = require("path");
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "num__store", "build", "index.html"));
+  });
 }
 
 app.use((err, req, res, next) => {
