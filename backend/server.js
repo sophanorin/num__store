@@ -9,6 +9,7 @@ import path from "path";
 dotenv.config();
 
 const app = express();
+const PORT = process.env.PORT || 8080;
 
 app.use(express.json());
 
@@ -26,8 +27,6 @@ mongoose
   .then(() => console.log("MongoBD connected..."))
   .catch((err) => console.log(err));
 
-const PORT = process.env.PORT || 5000;
-
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
 app.use("/api/orders", orderRouter);
@@ -37,7 +36,7 @@ app.get("/", (req, res) => {
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("../num__store/build"));
-  app.get("*", (req, res) => {
+  app.get("/hi", (req, res) => {
     res.sendFile(path.join(__dirname, "num__store", "build", "index.html"));
   });
 }
