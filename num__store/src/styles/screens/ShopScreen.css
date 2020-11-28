@@ -1,0 +1,29 @@
+#heroslider {
+  min-height: 90vh;
+  background: #fff;
+}
+
+#heroslider .slick-slider .slick-prev {
+  left: 15%;
+}
+
+#heroslider .slick-slider .slick-next {
+  right: 15%;
+}
+
+#heroslider .slick-slider .slick-arrow {
+  z-index: 999;
+  position: absolute;
+  background: none;
+  cursor: pointer;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#heroslider .slick-slider .slick-arrow:hover {
+  background: rgba(0, 0, 0, 0.7);
+}

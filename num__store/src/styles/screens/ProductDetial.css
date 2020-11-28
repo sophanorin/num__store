@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
 .productDetial_wrapper {
   width: 70%;
+  min-height: 90vh;
   margin: 5rem auto;
 }
 

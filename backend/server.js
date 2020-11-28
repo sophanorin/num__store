@@ -13,11 +13,17 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
 
-mongoose.connect("mongodb://localhost/num", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-});
+mongoose
+  .connect(
+    process.env.CONNECTION_STRING || "mongodb://localhost/storeRobotics",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+    }
+  )
+  .then(() => console.log("MongoBD connected..."))
+  .catch((err) => console.log(err));
 
 const PORT = process.env.PORT || 5000;
 
@@ -27,6 +33,10 @@ app.use("/api/orders", orderRouter);
 app.get("/", (req, res) => {
   res.send("Server is ready");
 });
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("../num__store/build"));
+}
 
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });

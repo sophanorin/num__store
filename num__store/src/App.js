@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import Products from "./screens/Products";
 import Footer from "./components/Footer.js";
-import Shop from "./components/Shop.js";
+import ShopScreen from "./screens/ShopScreen.js";
 import ProductsSlider from "./screens/ProductsSlider";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ProductDetial from "./screens/ProductDetial.js";
@@ -38,7 +38,7 @@ function App() {
         <Route path="/register" component={RegisterScreen} />
         <Route path="/checkout" component={CheckoutScreen} />
         <Route path="/products/:id" exact component={ProductDetial} />
-        <Route path="/shop" component={Shop} />
+        <Route path="/shop" component={ShopScreen} />
       </Switch>
       <footer id="footer" className="section footer">
         <Footer />
