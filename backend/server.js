@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import productRouter from "./routers/productRouter.js";
 import userRouter from "./routers/userRouter.js";
 import orderRouter from "./routers/orderRouter.js";
+import path from "path";
 
 dotenv.config();
 
@@ -36,7 +37,7 @@ app.get("/", (req, res) => {
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("../num__store/build"));
-  const path = require("path");
+
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "num__store", "build", "index.html"));
   });
