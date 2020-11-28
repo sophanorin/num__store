@@ -40,6 +40,7 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(
       path.join(__dirname, "..", "num__store", "build", "index.html")
     );
+    res.send("It work");
   });
 }
 
