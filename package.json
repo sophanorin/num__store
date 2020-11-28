@@ -5,10 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node backend/server.js",
-    "build": "cd num__store && npm run build",
-    "install-frontend": "cd num__store && npm install",
-    "heroku-postbuild": "npm run install-frontend && npm run build"
+    "start": "nodemon backend/server.js",
+    "heroku-postbuild": "npm install && cd num__store && npm install && npm run build"
   },
   "author": "rin",
   "license": "ISC",
