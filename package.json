@@ -8,7 +8,7 @@
     "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js",
     "build": "cd num__store && npm run build",
     "install-frontend": "cd num__store && npm install",
-    "heroku-postbuild": "npm run install-frontend && npm run build"
+    "heroku-postbuild": " npm install && npm run install-frontend && npm run build"
   },
   "author": "rin",
   "license": "ISC",
