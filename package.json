@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node backend/server.js",
     "build": "cd num__store && npm run build",
-    "install-frontend": "cd num__store && npm install",
+    "install-frontend": "cd num__store && npm install && npm start",
     "heroku-postbuild": " npm install && npm run install-frontend && npm run build"
   },
   "author": "rin",
